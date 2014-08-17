@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    var myInterval;
+    function hello() {
+      myInterval = setInterval(function(){
+        console.log("Hello");
+      }, 5000);
+    }
+
+    function myStopFunction() {
+      clearInterval(myInterval);
+    }
+  </script>
+</head>
+<body>
+  <script>
+    hello();
+  </script>
+</body>
+</html>

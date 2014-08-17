@@ -1,0 +1,74 @@
+[
+	{
+			"placename": "Software Park Thailand",
+		  	"latitude": "13.904195",
+		  	"longitude": "100.529741",
+		  	"placetype": "Buiding",
+				"radius": "200"
+		  },
+		  {
+		  	"placename": "central chaengwattana",
+		  	"latitude": "13.903534",
+		  	"longitude": "100.528252",
+		  	"placetype": "Shopping Mall",
+				"radius": "200"
+		  },
+		  {
+		  	"placename": "suvarnabhumi airport",
+		  	"latitude": "13.6932745",
+		  	"longitude": "100.7505625",
+		  	"placetype": "Airport",
+				"radius": "200"
+		  },
+		  {
+		  	"placename": "Goble House",
+		  	"latitude": "15.0007245",
+		  	"longitude": "102.11838",
+		  	"placetype": "Shopping Mall",
+				"radius": "200"
+		  },
+		  {
+		  	"placename": "Index Living Mall Nakhon Ratchasima Branch",
+		  	"latitude": "15.016937",
+		  	"longitude": "102.1296525",
+		  	"placetype": "Shopping Mall",
+				"radius": "200"
+		  },
+		  {
+		  	"placename": "The Mall Nakhon Ratchasima Branch",
+		  	"latitude": "14.9794525",
+		  	"longitude": "102.0771649",
+		  	"placetype": "Shopping Mall",
+				"radius": "200"
+		  },
+		  {
+		  	"placename": "Nakhon Ratchasima FC Stadium",
+		  	"latitude": "14.928468",
+		  	"longitude": "102.048649",
+		  	"placetype": "Stadium",
+				"radius": "200"
+		  },
+		  {
+		  	"placename": "Changi Airport Singpro",
+		  	"latitude": " 1.3530843",
+		  	"longitude": "102.048649",
+		  	"placetype": "Airport",
+				"radius": "200"
+		  }
+			,
+			{
+				"placename": "Wongpanit Taphanhin",
+				"latitude": "16.217166",
+				"longitude": "100.408652",
+				"placetype": "Stadium",
+				"radius": "200"
+			}
+			,
+			{
+				"placename": "Naresuan",
+				"latitude": "16.742444",
+				"longitude": "100.193818",
+				"placetype": "Shopping Mall",
+				"radius": "1000"
+			}
+		]
