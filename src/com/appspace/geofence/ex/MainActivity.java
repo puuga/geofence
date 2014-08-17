@@ -855,7 +855,7 @@ public class MainActivity extends FragmentActivity implements
         	e.printStackTrace();
         }
         
-        // return to javascript
+        // return to javascript in webview
         Gson gson = new Gson();
         final String temp = gson.toJson(wifiData);
         Log.d("wifi json", temp);
