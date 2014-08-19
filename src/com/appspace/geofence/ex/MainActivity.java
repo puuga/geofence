@@ -43,6 +43,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.JavascriptInterface;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
@@ -121,6 +122,7 @@ public class MainActivity extends FragmentActivity implements
 	private RoomlinkPlace roomlinkPlace[];
 
 	private String webURL = "http://beta.roomlinksaas.com";
+	//private String webURL = "file:///android_asset/www/index.html";
 
 	private WebView webView;
 
@@ -277,6 +279,7 @@ public class MainActivity extends FragmentActivity implements
 		webView = (WebView) findViewById(R.id.webView1);
 		webView.getSettings().setJavaScriptEnabled(true);
 		webView.setWebViewClient(new myWebClient());
+		webView.setWebChromeClient(new WebChromeClient());
 		webView.addJavascriptInterface((this), "Android");
 		webView.loadUrl(webURL);
 	}
@@ -882,7 +885,42 @@ public class MainActivity extends FragmentActivity implements
 		// Builds the notification and issues it.
 		mNotifyMgr.notify(mNotificationId, notification);
 	}
-
+	
+	@JavascriptInterface
+	// option 0 = no sound, no vibrate
+	// option 1 = no sound, vibrate
+	// option 2 = sound, no vibrate
+	// option 3 = sound, vibrate
+	public void showNoti(String title, String content, int option) {
+		Log.d("show noti", "show noti:" + title + "," + content);
+		NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(
+				this).setSmallIcon(R.drawable.ic_launcher)
+				.setContentTitle(title).setContentText(content);
+		Notification notification = mBuilder.build();
+		switch (option) {
+			case 0:
+				break;
+			case 1:
+				notification.defaults = Notification.DEFAULT_VIBRATE;
+				break;
+			case 2:
+				notification.defaults = Notification.DEFAULT_SOUND;
+				break;
+			case 3:
+				notification.defaults = Notification.DEFAULT_ALL;
+				break;
+			default:
+				notification.defaults = Notification.DEFAULT_ALL;
+				break;
+		}
+		// Sets an ID for the notification
+		int mNotificationId = 001;
+		// Gets an instance of the NotificationManager service
+		NotificationManager mNotifyMgr = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+		// Builds the notification and issues it.
+		mNotifyMgr.notify(mNotificationId, notification);
+	}
+	
 	@Override
 	public void onConnectionFailed(ConnectionResult result) {
 		Log.d(tagname, "onConnectionFailed");

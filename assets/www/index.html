@@ -2,21 +2,24 @@
 <html>
 <head>
   <script>
-    var myInterval;
-    function hello() {
-      myInterval = setInterval(function(){
-        console.log("Hello");
-      }, 5000);
-    }
-
-    function myStopFunction() {
-      clearInterval(myInterval);
-    }
+    function getwifi() {
+		console.log("call android - getWifiData()");
+		Android.getWifiData();
+		//alert("test");
+	}
+        
+	function getWifiDataFromAndroid(temp) {
+		console.log("receive data from android - json data");
+		console.log(temp);
+	
+		var wifiDatas = JSON.parse(temp);
+		console.log(wifiDatas.toString());
+		alert(wifiDatas.toString());
+		alert(""+wifiDatas.length);
+	}
   </script>
 </head>
 <body>
-  <script>
-    hello();
-  </script>
+  <button onclick="getwifi()">get wifi</button>
 </body>
 </html>
